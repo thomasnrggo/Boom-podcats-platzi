@@ -1,7 +1,11 @@
+import Link from 'next/link'
+//componentes
+import Layout from '../components/Layout'
+
 export default class extends React.Component {
     render() {
         return (
-            <div>
+            <Layout title="Acerca de..." footer={false}>
                 <img className="logo" src="/static/platzi-logo.png" alt="platzi" />
                 <h3>Hecho por Anthony González</h3>
                 <p>Bienvenido al curso de Next.js</p>
@@ -24,10 +28,10 @@ export default class extends React.Component {
 
                 <style jsx global>{`
                     body {
-                        background: #1c3643;
+                        background: #8756ca;
                     }
                 `}</style>
-            </div>
+            </Layout>
         )
     }
 }

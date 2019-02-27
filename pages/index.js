@@ -14,7 +14,7 @@ export default class extends React.Component {
     render() {
         const {channels} = this.props
         return (
-            <Layout title="Boom Podcats!">
+            <Layout title="Boom Podcats!" footer={true}>
                 <ChannelGrid channels={ channels } />
             </Layout>
         )

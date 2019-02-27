@@ -33,7 +33,7 @@ export default class extends React.Component {
         const {channel, audioClips, series} = this.props
         return (
 
-            <Layout title={channel.title}>
+            <Layout title={channel.title} footer={true}>
                 <div className="banner" style={{ backgroundImage: `url(${channel.urls.banner_image.original})` }} />
                 <h1>{channel.title}</h1>
 

@@ -21,6 +21,7 @@ export default class ChannelGrid extends React.Component {
                     display: grid;
                     grid-gap: 15px;
                     padding: 15px;
+                    margin-bottom: 15%;
                     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
                     }
                     a.channel {

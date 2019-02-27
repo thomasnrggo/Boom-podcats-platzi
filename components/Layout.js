@@ -1,14 +1,17 @@
 import Link from 'next/link'
 import Head from 'next/head'
+// componets
+import FooterNav from './footer'
 
 export default class Layout extends React.Component {
     render() {
-        const { children, title } = this.props
+        const { children, title, footer } = this.props
         return (
             <div>
                 <Head>
                     <title>{title}</title>
                     <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
                 </Head>
                     
                 <header>
@@ -18,6 +21,12 @@ export default class Layout extends React.Component {
                 </header>
 
                 { children }
+
+                {footer == true &&
+                    <FooterNav />
+                }
+
+                
 
                 <style jsx>{`
                     header {
