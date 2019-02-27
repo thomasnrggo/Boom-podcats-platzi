@@ -1,3 +1,6 @@
+import 'isomorphic-fetch'
+import Link from 'next/link'
+
 export default class extends React.Component {
 
     static async getInitialProps({ query }) {
@@ -18,7 +21,7 @@ export default class extends React.Component {
 
         let dataSeries = await reqSeries.json()
         let series = dataSeries.body.channels
-        
+
         return { channel, audioClips, series }
     }
 
@@ -35,7 +38,10 @@ export default class extends React.Component {
                 ))}
                 <h2>Últimos Podcasts</h2>
                 {audioClips.map((clip)=> (
-                    <div>{clip.title}</div>
+                    <Link href={`/podcats?id=${clip.id}`}>
+                        <a className="listItem">{clip.title}</a>
+                    </Link>
+                    
                 ))}
 
 
@@ -74,6 +80,17 @@ export default class extends React.Component {
                     margin: 0;
                     text-align: center;
                     }
+                    .listItem {
+                        color: black;
+                        padding: 8px;
+                        text-decoration: none;
+                        display: block;
+                        background: #ded2ef;
+                    }
+                    .listItem:nth-child (odd) {
+                        background: #bcadd1;
+                    }
+
                 `}</style>
 
                 <style jsx global>{`
