@@ -39,7 +39,7 @@ export default class PodcastList extends React.Component {
                     font-size: 0.8em;
                     }
                     .container {
-                        margin-bottom: 12%;
+                        margin-bottom: 42px;
                     }
                 `}</style>
             </div>
