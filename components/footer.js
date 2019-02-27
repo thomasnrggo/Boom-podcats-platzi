@@ -8,18 +8,13 @@ export default class FooterNav extends React.Component {
             <nav className="footer">
                 <Link href="/about">
                     <a>
-                        <FontAwesomeIcon className="icon" icon={faChevronCircleLeft} size="lg" color="#fff" />
-                    </a>
-                </Link>
-                <Link href="/about">
-                    <a>
                         <FontAwesomeIcon className="icon" icon={faInfo} size="lg" color="#fff" />
                     </a>
                 </Link>
 
                 <style jsx>{`
                 .footer {
-                        min-height: 24px;
+                        min-height: 28px;
                         position: fixed;
                         bottom: 0;
                         color: #fff;

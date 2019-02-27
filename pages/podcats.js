@@ -1,5 +1,7 @@
 import 'isomorphic-fetch'
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default class extends React.Component {
 
@@ -19,7 +21,9 @@ export default class extends React.Component {
                     <div className="clip">
                         <nav>
                             <Link href={`/channel?id=${clip.channel.id}`}>
-                                <a className="close">&lt; Volver</a>
+                                <a className="close">
+                                    <FontAwesomeIcon icon={faChevronCircleLeft} size="2x" color="#fff" />
+                                </a>
                             </Link>
                         </nav>
 

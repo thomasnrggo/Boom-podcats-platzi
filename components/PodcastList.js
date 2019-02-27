@@ -5,16 +5,18 @@ export default class PodcastList extends React.Component {
         const { podcasts } = this.props
         return (
             <div>
-                {podcasts.map((podcast) => (
-                    <Link href={`/podcats?id=${podcast.id}`} prefetch key={podcast.id}>
-                        <a className="podcast">
-                            <h3>{podcast.title}</h3>
-                            <div className='meta'>
-                                {Math.ceil(podcast.duration / 60)} minutes
+                <div className="container">
+                    {podcasts.map((podcast) => (
+                        <Link href={`/podcats?id=${podcast.id}`} prefetch key={podcast.id}>
+                            <a className="podcast">
+                                <h3>{podcast.title}</h3>
+                                <div className='meta'>
+                                    {Math.ceil(podcast.duration / 60)} minutes
                                 </div>
-                        </a>
-                    </Link>
-                ))}
+                            </a>
+                        </Link>
+                    ))}
+                </div>
 
                 <style jsx>{`
                     .podcast {
@@ -35,6 +37,9 @@ export default class PodcastList extends React.Component {
                     color: #666;
                     margin-top: 0.5em;
                     font-size: 0.8em;
+                    }
+                    .container {
+                        margin-bottom: 12%;
                     }
                 `}</style>
             </div>

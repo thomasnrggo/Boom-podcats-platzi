@@ -39,6 +39,7 @@ export default class Layout extends React.Component {
                     header a {
                         color: #fff;
                         text-decoration: none;
+                        font-size: 18px;
                     }
                 `}</style>
 
