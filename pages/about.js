@@ -60,7 +60,7 @@ export default class extends React.Component {
                         font-weight: bold;
                     }
                     a:hover {
-                        color: #6fc629;
+                        color: #f9f939;
                     }
                     .volver {
                         padding: 50px 12px;
