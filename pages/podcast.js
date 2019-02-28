@@ -32,7 +32,6 @@ export default class extends React.Component {
 
         return (
             <div>
-                <header>Podcast</header>
                 <div className="modal">
                     <div className="clip">
                         <nav>
@@ -58,12 +57,6 @@ export default class extends React.Component {
                 </div>
 
                 <style jsx>{`
-                    header {
-                    color: #fff;
-                    background: #8756ca;
-                    padding: 15px;
-                    text-align: center;
-                    }
                     nav {
                     background: none;
                     }
@@ -113,22 +106,7 @@ export default class extends React.Component {
                     margin-top: 2em;
                     width: 100%;
                     }
-                    .modal {
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    z-index: 99999;
-                    }
-                `}</style>
-
-                <style jsx global>{`
-                    body {
-                        margin: 0;
-                        font-family: system-ui;
-                        background: white;
-                    }
+                    
                 `}</style>
             </div>
         )

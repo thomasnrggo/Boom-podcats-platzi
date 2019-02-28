@@ -15,7 +15,7 @@ export default class Layout extends React.Component {
                     
                 <header>
                     <Link href="/">
-                        <a>¡Boom Podcats!</a>
+                        <a>¡Boom Podcasts!</a>
                     </Link>
                 </header>
 

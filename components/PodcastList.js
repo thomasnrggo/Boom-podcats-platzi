@@ -7,7 +7,7 @@ export default class PodcastList extends React.Component {
             <div>
                 <div className="container">
                     {podcasts.map((podcast) => (
-                        <Link href={`/podcats?id=${podcast.id}`} prefetch key={podcast.id}>
+                        <Link href={`/podcast?id=${podcast.id}`} prefetch key={podcast.id}>
                             <a className="podcast">
                                 <h3>{podcast.title}</h3>
                                 <div className='meta'>
