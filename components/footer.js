@@ -6,7 +6,7 @@ export default class FooterNav extends React.Component {
     render() {
         return (
             <nav className="footer">
-                <Link href="/about">
+                <Link href="/about" prefetch>
                     <a>
                         <FontAwesomeIcon className="icon" icon={faInfo} size="lg" color="#fff" />
                     </a>
