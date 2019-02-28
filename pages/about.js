@@ -26,11 +26,13 @@ export default class extends React.Component {
                       
                 </div>
 
-                <h3>Hecho por<Link href="https://twitter.com/thomas_nrg"><a> @thomas_nrg </a></Link></h3>
+                <h3>Hecho por<Link href="https://twitter.com/thomas_nrg" prefetch><a> @thomas_nrg </a></Link></h3>
 
                 <style jsx>{`
                     .container {
                         padding: 100px 30px;
+                        max-width: 450px;
+                        margin: 0 auto;
                     }
                     h3 {
                         width: 100%;
@@ -47,7 +49,7 @@ export default class extends React.Component {
                         line-height: 1.3em;
                     }
                     .logo {
-                        max-width:20%;
+                        max-width:180px;
                         display: block;
                         margin: 0 auto;
                     }
@@ -63,6 +65,14 @@ export default class extends React.Component {
                     .volver {
                         padding: 50px 12px;
                         text-align: center;
+                    }
+                    @media (max-width: 680px) {
+                        .logo {
+                            max-width: 20%;
+                        }
+                        .container {
+                        padding: 100px 30px;
+                    }
                     }
                 `}</style>
 
