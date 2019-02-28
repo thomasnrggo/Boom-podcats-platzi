@@ -1,5 +1,9 @@
 {
-  "alias": [
-    "boom-podcasts.com"
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/next"
+    }
   ]
 }
