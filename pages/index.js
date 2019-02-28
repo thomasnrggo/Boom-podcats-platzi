@@ -31,7 +31,7 @@ export default class extends React.Component {
         }
 
         return (
-            <Layout title="Boom Podcats!" footer={true}>
+            <Layout title="Boom Podcats!" footer={false}>
                 <ChannelGrid channels={ channels } />
             </Layout>
         )

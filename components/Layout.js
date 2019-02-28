@@ -2,6 +2,8 @@ import Link from 'next/link'
 import Head from 'next/head'
 import NProgress from 'nprogress'
 import Router from 'next/router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfo } from '@fortawesome/free-solid-svg-icons'
 // componets
 import FooterNav from './footer'
 
@@ -22,8 +24,11 @@ export default class Layout extends React.Component {
                 </Head>
                     
                 <header>
-                    <Link href="/">
-                        <a>¡Boom Podcasts!</a>
+                    <Link href="/"><a>¡Boom Podcasts!</a></Link>
+                    <Link  href="/about" prefetch>
+                        <a className="info">
+                            <FontAwesomeIcon className="icon" icon={faInfo} size="sm" color="#a578e2" />
+                        </a>
                     </Link>
                 </header>
 
@@ -39,14 +44,22 @@ export default class Layout extends React.Component {
                     header {
                         color: #fff;
                         background: #8756ca;
-                        padding: 15px;
+                        padding: 15px 2px;
                         text-align: center;
                         font-weight: 600;
+                        position: fixed;
+                        width: 100%;
+                        top: 0;
                     }
                     header a {
                         color: #fff;
                         text-decoration: none;
                         font-size: 18px;
+                    }
+                    .info {
+                        position: fixed;
+                        left: 10px;
+                        top: 13px;
                     }
                 `}</style>
 

@@ -72,7 +72,7 @@ export default class extends React.Component {
 
         return (
 
-            <Layout title={channel.title} footer={true}>
+            <Layout title={channel.title} footer={false}>
                 <div className="banner" style={{ backgroundImage: `url(${channel.urls.banner_image.original})` }} />
 
                 {  openPodcast && 
@@ -86,7 +86,10 @@ export default class extends React.Component {
                 {series.length > 0 &&
                     <div>
                         <h2>Series</h2>
-                        <ChannelGrid channels={series} />
+                        <div className="seriesContainer">
+                            <ChannelGrid channels={series} />
+                        </div>
+                        
                     </div>
                 }
 
@@ -99,18 +102,24 @@ export default class extends React.Component {
                 <style jsx>{`
                     .banner {
                     width: 100%;
-                    padding-bottom: 25%;
+                    min-height: 20vh;
+                    padding-bottom: 4%;
                     background-position: 50% 50%;
                     background-size: cover;
                     background-color: #aaa;
+                    margin-top: 36px;
+                    }
+                    .seriesContainer {
+                        margin-top: -4em;
                     }
                     h1 {
                     font-weight: 600;
                     padding: 15px;
+                    margin: 0px;
                     }
                     h2 {
                     padding: 15px;
-                    font-size: 1.8em;
+                    font-size: 1.6em;
                     font-weight: 600;
                     margin: 0;
                     color: #8756ca;
