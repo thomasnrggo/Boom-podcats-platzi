@@ -1,19 +1,35 @@
 import 'isomorphic-fetch'
 import Link from 'next/link'
+import Error from './_error'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons'
 
 export default class extends React.Component {
 
-    static async getInitialProps( {query} ) {
+    static async getInitialProps( {query, res} ) {
         let id = query.id
-        let dataClip = await fetch(`https://api.audioboom.com/audio_clips/${id}.mp3`)
-        let clip = (await dataClip.json()).body.audio_clip
-        return { clip }
+        try {
+            let dataClip = await fetch(`https://api.audioboom.com/audio_clips/${id}.mp3`)
+            let clip = (await dataClip.json()).body.audio_clip
+
+            if (dataClip.status >= 400) {
+                res.statusCode = dataClip.status
+                return { clip: null, statusCode: dataClip.status }
+            }
+
+            return { clip, statusCode: 200 }
+        } catch(err) {
+            return { clip: null, statusCode: 503 }
+        }
     }
 
     render() {
-        const { clip } = this.props
+        const { clip, statusCode } = this.props
+
+        if (statusCode !== 200) {
+            return <Error statusCode={ statusCode} />
+        }
+
         return (
             <div>
                 <header>Podcast</header>
