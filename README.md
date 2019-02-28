@@ -3,6 +3,8 @@
 ¡Boom podcats! nace del proyecto realizado bajo la guía del profesor @robertcode ‏ en el curso de next de platzi. La aplicación funciona gracias al API de audioBoom y esta hecha desde 0 con nextJs.
 
 ![Captura de home](./.readme-static/home.png)
+![Captura de podcast](./.readme-static/podcast.png)
+![Captura de player](./.readme-static/player.png)
 
 ## ¿Cómo funciona?
 
