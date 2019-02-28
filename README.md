@@ -4,7 +4,7 @@
 
 ![Captura de home](./.readme-static/home.png)
 
-![Demo](https://boompodcast-dyxuyfnhz.now.sh/)
+[Puedes ver el demo aca.](https://boompodcast-dyxuyfnhz.now.sh/)
 
 ## ¿Cómo funciona?
 
